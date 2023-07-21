@@ -1,18 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
-import MyStack from './Stack';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, Button, SafeAreaView } from "react-native";
+import MyStack from "./Stack";
 
 export default function App() {
   return (
-   <MyStack />
+    <SafeAreaView>
+      <MyStack />
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
