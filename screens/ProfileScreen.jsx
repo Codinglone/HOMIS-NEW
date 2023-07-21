@@ -1,7 +1,8 @@
-import { Text, Image, View, StyleSheet } from "react-native";
+import { Text, Image, View, StyleSheet, SafeAreaView } from "react-native";
 
 const ProfileScreen = ({ navigation, route }) => {
   return (
+    <SafeAreaView>
     <View style={styled.profile}>
       <Text style={{ color: "white" }}>
         This is {route.params.name}'s account
@@ -13,6 +14,7 @@ const ProfileScreen = ({ navigation, route }) => {
         style={{height: 200, width: '100%', marginTop: 40}}
       />
     </View>
+    </SafeAreaView>
   );
 };
 

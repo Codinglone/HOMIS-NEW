@@ -4,9 +4,8 @@ import MyStack from "./Stack";
 
 export default function App() {
   return (
-    <SafeAreaView>
       <MyStack />
-    </SafeAreaView>
   );
 }
+
 
