@@ -24,6 +24,13 @@ const HomeScreen = ({ navigation }) => {
         style={{backgroundColor: 'blue'}}
       />
       </View>
+      <View style={{marginTop: 10}}>
+      <Button 
+        title="Send SMS"
+        onPress={() => navigation.navigate("SMS")}
+        style={{backgroundColor: 'blue'}}
+      />
+      </View>
     </SafeAreaView>
   );
 };

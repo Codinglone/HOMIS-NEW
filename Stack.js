@@ -5,6 +5,7 @@ import HomeScreen from "./screens/HomeScreen"
 import ProfileScreen from "./screens/ProfileScreen"
 import LoginScreen from "./screens/Login"
 import DataScreen from "./screens/DataScreen"
+import SendSmsScreen from "./screens/SendSmsScreen"
 
 const Stack = createNativeStackNavigator()
 
@@ -29,6 +30,11 @@ const MyStack = () => {
                     name="Users"
                     component={DataScreen}
                     options={{title: 'All users'}}
+                />
+                <Stack.Screen 
+                    name="SMS"
+                    component={SendSmsScreen}
+                    options={{title: 'Send SMS'}}
                 />
             </Stack.Navigator>
         </NavigationContainer>
