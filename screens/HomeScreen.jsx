@@ -113,12 +113,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#222831"
   },
   title: {
-    fontSize: 48,
+    fontSize: 32,
     fontWeight: 900,
     color: '#fff',
   },
   typography: {
-    fontSize: 48,
+    fontSize: 32,
     color: "#fff",
     fontFamily: "sans-serif",
     fontWeight: 900,
