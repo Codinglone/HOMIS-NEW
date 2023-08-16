@@ -5,7 +5,7 @@ import HomeScreen from "./screens/HomeScreen"
 import ProfileScreen from "./screens/ProfileScreen"
 import LoginScreen from "./screens/Login"
 import DataScreen from "./screens/DataScreen"
-import SendSmsScreen from "./screens/SendSmsScreen"
+import PlaceOrder from "./screens/PlaceOrder"
 
 const Stack = createNativeStackNavigator()
 
@@ -40,7 +40,7 @@ const MyStack = () => {
                 />
                 <Stack.Screen 
                     name="Place New Order"
-                    component={SendSmsScreen}
+                    component={PlaceOrder}
                 />
             </Stack.Navigator>
         </NavigationContainer>

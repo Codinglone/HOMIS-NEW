@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, Button } from "react-native";
 import * as SMS from "expo-sms";
 
-const SendSmsScreen = () => {
+const PlaceOrder = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
@@ -55,4 +55,4 @@ const SendSmsScreen = () => {
   );
 };
 
-export default SendSmsScreen;
+export default PlaceOrder;
