@@ -1,8 +1,9 @@
-import { SafeAreaView, View, TouchableOpacity, StyleSheet, Text } from "react-native";
+import { SafeAreaView, View, TouchableOpacity, StyleSheet, Text, ScrollView } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView>
+      <ScrollView>
       <View style={styles.titleView}>
         <Text style={styles.title}>WELCOME TO HO-MIS</Text>
       </View>
@@ -11,7 +12,7 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_one}
           onPress={() => navigation.navigate("Profile", { name: "Jane" })}
         >
-          <Text>MY ACCOUNT</Text>
+          <Text style={styles.typography}>MY ACCOUNT</Text>
         </TouchableOpacity>
       </View>
       <View style={{ marginTop: 10 }}>
@@ -19,7 +20,7 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_two}
           onPress={() => navigation.navigate("Manager Account Login")}
         >
-          <Text>MANAGER LOGIN</Text>
+          <Text style={styles.typography}>MANAGER LOGIN</Text>
         </TouchableOpacity>
         
       </View>
@@ -28,7 +29,7 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_two}
           onPress={() => navigation.navigate("Kitchen Account Login")}
         >
-          <Text>KITCHEN LOGIN</Text>
+          <Text style={styles.typography}>KITCHEN LOGIN</Text>
         </TouchableOpacity>
         
       </View>
@@ -37,7 +38,7 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_two}
           onPress={() => navigation.navigate("Drinks Account Login")}
         >
-          <Text>DRINKS LOGIN</Text>
+          <Text style={styles.typography}>DRINKS LOGIN</Text>
         </TouchableOpacity>
         
       </View>
@@ -47,7 +48,7 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_three}
           onPress={() => navigation.navigate("View All Orders")}
         >
-          <Text>VIEW ORDERS</Text>
+          <Text style={styles.typography}>VIEW ORDERS</Text>
         </TouchableOpacity>
       </View>
       <View style={{ marginTop: 10 }}>
@@ -56,9 +57,10 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_four}
           onPress={() => navigation.navigate("Place New Order")}
         >
-          <Text>PLACE ORDER</Text>
+          <Text style={styles.typography}>PLACE ORDER</Text>
         </TouchableOpacity>
       </View>
+    </ScrollView>
     </SafeAreaView>
   );
 };
@@ -84,46 +86,30 @@ const styles = StyleSheet.create({
   },
   touchable_one: {
     height: 100,
-    fontSize: 48,
-    color: "#fff",
-    fontFamily: "sans-serif",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontWeight: 900,
     backgroundColor: '#222831'
   },
   touchable_two: {
     height: 100,
-    fontSize: 48,
-    color: "#fff",
-    fontFamily: "sans-serif",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontWeight: 900,
     backgroundColor: "#222831"
   },
   touchable_three: {
     height: 100,
-    fontSize: 48,
-    color: "#fff",
-    fontFamily: "sans-serif",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontWeight: 900,
     backgroundColor: "#222831"
   },
   touchable_four: {
     height: 100,
-    fontSize: 48,
-    color: "#fff",
-    fontFamily: "sans-serif",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontWeight: 900,
     backgroundColor: "#222831"
   },
   title: {
@@ -131,6 +117,12 @@ const styles = StyleSheet.create({
     fontWeight: 900,
     color: '#fff',
   },
+  typography: {
+    fontSize: 48,
+    color: "#fff",
+    fontFamily: "sans-serif",
+    fontWeight: 900,
+  }
   
 });
 
