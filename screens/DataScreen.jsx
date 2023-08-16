@@ -162,7 +162,11 @@ const DataScreen = () => {
       <ScrollView>
         {orders.length > 0 ? (
           orders.map(order => (
-            <Text key={order.id}>{order.name}</Text>
+            <View>
+              <Text key={order.id}>{order.name}</Text>
+              <Text>{order.category}</Text>
+            </View>
+            
           ))
         ) : (
           <Text>Loading orders...</Text>
