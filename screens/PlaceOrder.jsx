@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, TextInput, Button, ScrollView } from "react-native";
+import { View, Text, TextInput, Button, ScrollView, StyleSheet } from "react-native";
 
 const PlaceOrder = () => {
   const [phone, setPhone] = useState("");
+  const [fullName, setFullName] = useState("")
+  const [error, setError] = useState("")
   return (
     <ScrollView>
       <View>
-        <Text>Enter fullname</Text>
+        <Text style={styles.labels}>Enter Full Name</Text>
         <TextInput
+          style={styles.fields}
           placeholder="Full name"
-          onChangeText={(phone) => setPhone(phone)}
+          onChangeText={(name) => setPhone(name)}
         />
       </View>
       <View>
-        <Text>Enter mobile number</Text>
+        <Text style={styles.labels}>Enter Mobile Number</Text>
         <TextInput
           placeholder="Mobile number"
-          onChangeText={(phone) => setPhone(phone)}
+          onChangeText={(phone) => setFullName(phone)}
         />
       </View>
       <View>
@@ -25,6 +28,20 @@ const PlaceOrder = () => {
     </ScrollView>
   );
 };
+
+const styles = StyleSheet.create({
+  labels: {
+    fontSize: 18,
+    fontWeight: 600,
+  },
+  fields: {
+    borderBottomWidth: 2,
+    borderWidth: 0,
+    borderBottomColor: "black",
+    paddingVertical: 2,
+    marginVertical: 2
+  }
+})
 
 export default PlaceOrder;
 
