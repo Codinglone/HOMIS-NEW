@@ -1,3 +1,4 @@
+import React from "react";
 import {
   SafeAreaView,
   View,
@@ -9,15 +10,31 @@ import {
 } from "react-native";
 import { useEffect, useState } from "react";
 import food from "../assets/food.jpg";
+import beverage from "../assets/beverage.jpg";
 
 const NormalOrder = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
-      <View>
-        <ImageBackground source={food} resizeMode="cover" style={styles.imageBack}>
-            <Text>FOODS & BEVERAGES</Text>
-        </ImageBackground>
-      </View>
+      <ImageBackground
+        source={food}
+        resizeMode="cover"
+        style={styles.imageBack}
+      >
+        <View style={styles.overlay} />
+        <Text style={{ color: "#FCFFE7", fontSize: 32, fontWeight: "900" }}>
+        FOODS & SNACKS
+        </Text>
+      </ImageBackground>
+      <ImageBackground
+        source={beverage}
+        resizeMode="cover"
+        style={styles.imageBack}
+      >
+        <View style={styles.overlay} />
+        <Text style={{ color: "#FCFFE7", fontSize: 32, fontWeight: "900" }}>
+          DRINKS & BEVERAGES
+        </Text>
+      </ImageBackground>
     </SafeAreaView>
   );
 };
@@ -28,14 +45,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   imageBack: {
-    height: 200,
-    
+    height: 240,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginVertical: 24,
   },
-  imageText: {
-    color: "#fff",
-    fontSize: 24,
-    fontWeight: 900,
-  }
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0, 0, 0, 0.3)",
+  },
 });
 
 export default NormalOrder;
