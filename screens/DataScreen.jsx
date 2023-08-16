@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Text, View, FlatList, StyleSheet, ScrollView, Image } from "react-native";
+import {
+  Text,
+  View,
+  FlatList,
+  StyleSheet,
+  ScrollView,
+  Image,
+} from "react-native";
 import axios from "axios";
-import { getOrders } from "../firebase"; 
+import { getOrders } from "../firebase";
 
 const DataScreen = () => {
   const [data, setData] = useState([]);
   const [photos, setPhotos] = useState([]);
-  const [orders, setOrders] = useState([]); 
+  const [orders, setOrders] = useState([]);
 
   const baseUrl = "https://jsonplaceholder.typicode.com";
 
@@ -23,7 +30,7 @@ const DataScreen = () => {
   const fetchPhotos = async () => {
     const url = `${baseUrl}/photos`;
     const params = {
-      _limit: 4, 
+      _limit: 4,
     };
 
     try {
@@ -54,7 +61,9 @@ const DataScreen = () => {
       {data.length > 0 ? (
         <FlatList
           data={data}
-          renderItem={({ item }) => <Text style={styles.item}>{item.name}</Text>}
+          renderItem={({ item }) => (
+            <Text style={styles.item}>{item.name}</Text>
+          )}
           keyExtractor={(item) => item.id.toString()}
         />
       ) : (
@@ -63,21 +72,26 @@ const DataScreen = () => {
 
       <ScrollView>
         {photos.length > 0 ? (
-          photos.slice(0, 4).map((photo) => (
-            <Image key={photo.id} source={{ uri: photo.url }} style={styles.image} />
-          ))
+          photos
+            .slice(0, 4)
+            .map((photo) => (
+              <Image
+                key={photo.id}
+                source={{ uri: photo.url }}
+                style={styles.image}
+              />
+            ))
         ) : (
           <Text>Loading photos...</Text>
         )}
       </ScrollView>
       <ScrollView>
         {orders.length > 0 ? (
-          orders.map(order => (
+          orders.map((order) => (
             <View>
               <Text key={order.id}>{order.name}</Text>
               <Text>{order.category}</Text>
             </View>
-            
           ))
         ) : (
           <Text>Loading orders...</Text>
@@ -89,7 +103,7 @@ const DataScreen = () => {
 
 const styles = StyleSheet.create({
   item: {
-    fontWeight: 400, 
+    fontWeight: 400,
     fontSize: 18,
     paddingVertical: 4,
     textAlign: "center",
