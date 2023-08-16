@@ -89,7 +89,7 @@ const DataScreen = () => {
 
 const styles = StyleSheet.create({
   item: {
-    fontWeight: "400", 
+    fontWeight: 400, 
     fontSize: 18,
     paddingVertical: 4,
     textAlign: "center",
