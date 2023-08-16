@@ -1,9 +1,11 @@
-import { SafeAreaView, View, TouchableOpacity, StyleSheet } from "react-native";
-import { Button } from "@react-native-material/core";
+import { SafeAreaView, View, TouchableOpacity, StyleSheet, Text } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView>
+      <View style={styles.titleView}>
+        <Text style={styles.title}>WELCOME TO HO-MIS</Text>
+      </View>
       <View>
         <TouchableOpacity
           style={styles.touchable_one}
@@ -62,6 +64,14 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  titleView: {
+    height: '10vh',
+    backgroundColor: '#00ADB5',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: "0.7rem"
+  },
   touchable: {
     height: "200px",
     fontSize: "48px",
@@ -81,7 +91,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     fontWeight: "900",
-    backgroundColor: 'teal'
+    backgroundColor: '#222831'
   },
   touchable_two: {
     height: "10vh",
@@ -92,7 +102,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     fontWeight: "900",
-    backgroundColor: 'blue'
+    backgroundColor: '#222831'
   },
   touchable_three: {
     height: "10vh",
@@ -103,7 +113,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     fontWeight: "900",
-    backgroundColor: 'blue'
+    backgroundColor: '#222831'
   },
   touchable_four: {
     height: "10vh",
@@ -114,8 +124,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     fontWeight: "900",
-    backgroundColor: 'blue'
+    backgroundColor: '#222831'
   },
+  title: {
+    fontSize: '48px',
+    fontWeight: 900,
+    color: '#fff',
+  },
+  
 });
 
 export default HomeScreen;
