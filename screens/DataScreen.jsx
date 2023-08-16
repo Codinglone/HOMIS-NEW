@@ -63,14 +63,14 @@ const DataScreen = () => {
 
 const styles = StyleSheet.create({
   item: {
-    fontWeight: "400",
-    fontSize: "18px",
-    paddingVertical: "4px",
+    fontWeight: 400,
+    fontSize: 18,
+    paddingVertical: 4,
     textAlign: "center",
   },
   image: {
-    width: "100%",
-    height: "200px",
+    width: 100,
+    height: 200,
   },
 });
 
