@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, Button, ScrollView, StyleSheet } from "react-native";
 
-const PlaceOrder = () => {
+const PlaceOrder = ({ navigation }) => {
   const [phone, setPhone] = useState("");
   const [fullName, setFullName] = useState("")
   const [error, setError] = useState("")
@@ -24,7 +24,7 @@ const PlaceOrder = () => {
         />
       </View>
       <View style={styles.views}>
-        <Button title="Continue" />
+        <Button title="Continue" onPress={() => navigation.navigate("Normal Order")} />
       </View>
     </ScrollView>
   );
