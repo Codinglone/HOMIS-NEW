@@ -23,18 +23,24 @@ const MyStack = () => {
                     component={ProfileScreen}
                 />
                 <Stack.Screen 
-                    name="Login"
+                    name="Manager Account Login"
                     component={LoginScreen}
                 />
                 <Stack.Screen 
-                    name="Users"
-                    component={DataScreen}
-                    options={{title: 'All users'}}
+                    name="Kitchen Account Login"
+                    component={LoginScreen}
                 />
                 <Stack.Screen 
-                    name="SMS"
+                    name="Drinks Account Login"
+                    component={LoginScreen}
+                />
+                <Stack.Screen 
+                    name="View All Orders"
+                    component={DataScreen}
+                />
+                <Stack.Screen 
+                    name="Place New Order"
                     component={SendSmsScreen}
-                    options={{title: 'Send SMS'}}
                 />
             </Stack.Navigator>
         </NavigationContainer>

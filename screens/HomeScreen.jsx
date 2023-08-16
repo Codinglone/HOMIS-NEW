@@ -17,7 +17,7 @@ const HomeScreen = ({ navigation }) => {
       <View style={{ marginTop: 10 }}>
         <TouchableOpacity
           style={styles.touchable_two}
-          onPress={() => navigation.navigate("Login")}
+          onPress={() => navigation.navigate("Manager Account Login")}
         >
           MANAGER LOGIN
         </TouchableOpacity>
@@ -26,7 +26,7 @@ const HomeScreen = ({ navigation }) => {
       <View style={{ marginTop: 10 }}>
         <TouchableOpacity
           style={styles.touchable_two}
-          onPress={() => navigation.navigate("Login")}
+          onPress={() => navigation.navigate("Kitchen Account Login")}
         >
           KITCHEN LOGIN
         </TouchableOpacity>
@@ -35,7 +35,7 @@ const HomeScreen = ({ navigation }) => {
       <View style={{ marginTop: 10 }}>
         <TouchableOpacity
           style={styles.touchable_two}
-          onPress={() => navigation.navigate("Login")}
+          onPress={() => navigation.navigate("Drinks Account Login")}
         >
           DRINKS LOGIN
         </TouchableOpacity>
@@ -45,7 +45,7 @@ const HomeScreen = ({ navigation }) => {
      
         <TouchableOpacity
           style={styles.touchable_three}
-          onPress={() => navigation.navigate("Users")}
+          onPress={() => navigation.navigate("View All Orders")}
         >
           VIEW ORDERS
         </TouchableOpacity>
@@ -54,7 +54,7 @@ const HomeScreen = ({ navigation }) => {
 
         <TouchableOpacity
           style={styles.touchable_four}
-          onPress={() => navigation.navigate("SMS")}
+          onPress={() => navigation.navigate("Place New Order")}
         >
           PLACE ORDER
         </TouchableOpacity>
