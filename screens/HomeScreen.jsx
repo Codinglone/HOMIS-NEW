@@ -11,7 +11,7 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_one}
           onPress={() => navigation.navigate("Profile", { name: "Jane" })}
         >
-          MY ACCOUNT
+          <Text>MY ACCOUNT</Text>
         </TouchableOpacity>
       </View>
       <View style={{ marginTop: 10 }}>
@@ -19,7 +19,7 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_two}
           onPress={() => navigation.navigate("Manager Account Login")}
         >
-          MANAGER LOGIN
+          <Text>MANAGER LOGIN</Text>
         </TouchableOpacity>
         
       </View>
@@ -28,7 +28,7 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_two}
           onPress={() => navigation.navigate("Kitchen Account Login")}
         >
-          KITCHEN LOGIN
+          <Text>KITCHEN LOGIN</Text>
         </TouchableOpacity>
         
       </View>
@@ -37,7 +37,7 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_two}
           onPress={() => navigation.navigate("Drinks Account Login")}
         >
-          DRINKS LOGIN
+          <Text>DRINKS LOGIN</Text>
         </TouchableOpacity>
         
       </View>
@@ -47,7 +47,7 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_three}
           onPress={() => navigation.navigate("View All Orders")}
         >
-          VIEW ORDERS
+          <Text>VIEW ORDERS</Text>
         </TouchableOpacity>
       </View>
       <View style={{ marginTop: 10 }}>
@@ -56,7 +56,7 @@ const HomeScreen = ({ navigation }) => {
           style={styles.touchable_four}
           onPress={() => navigation.navigate("Place New Order")}
         >
-          PLACE ORDER
+          <Text>PLACE ORDER</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
