@@ -5,6 +5,20 @@ const PlaceOrder = ({ navigation }) => {
   const [phone, setPhone] = useState("");
   const [fullName, setFullName] = useState("")
   const [error, setError] = useState("")
+
+  const handleSubmit = () => {
+
+    if(fullName === "" || phone === ""){
+      setError("Please fill all the fields")
+      setTimeout(() => {
+        setError("")
+      }, 5000)
+      
+    }
+    else {
+      navigation.navigate("Normal Order")
+    }
+  }
   return (
     <ScrollView style={styles.container}>
       <View style={styles.views}>
@@ -24,8 +38,9 @@ const PlaceOrder = ({ navigation }) => {
         />
       </View>
       <View style={styles.views}>
-        <Button title="Continue" onPress={() => navigation.navigate("Normal Order")} />
+        <Button title="Continue" onPress={handleSubmit} />
       </View>
+      {error && (<Text style={styles.error}>{error}</Text>)}
     </ScrollView>
   );
 };
@@ -47,6 +62,11 @@ const styles = StyleSheet.create({
   },
   views: {
     marginVertical: 12
+  },
+  error: {
+    color: "#EB455F",
+    fontSize: 24,
+    fontWeight: 600
   }
 })
 
