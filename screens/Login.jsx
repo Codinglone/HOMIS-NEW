@@ -3,19 +3,19 @@ import { SafeAreaView, TextInput, Button, Text, View, StyleSheet } from "react-n
 
 const styled = StyleSheet.create({
     header: {
-        textTransform: 'uppercase',
-        fontWeight: 900,
-        textAlign: 'center',
-        fontSize: 18,
-        paddingVertical: 20,
-        color: 'teal'
+        textTransform: "uppercase",
+        fontWeight: "900",
+        textAlign: "center",
+        fontSize: "18px",
+        paddingVertical: "20px",
+        color: "teal"
     },
     field: {
-        borderWidth: 1,
-        borderBottomColor: 'black',
-        borderStyle: 'solid',
-        marginHorizontal: 6,
-        color: 'black'
+        borderWidth: "1px",
+        borderBottomColor: "black",
+        borderStyle: "solid",
+        marginHorizontal: "6px",
+        color: "black"
     }
 })
 

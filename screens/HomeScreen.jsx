@@ -65,11 +65,11 @@ const HomeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   titleView: {
-    height: '10vh',
-    backgroundColor: '#00ADB5',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    height: "10vh",
+    backgroundColor: "#00ADB5",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     marginBottom: "0.7rem"
   },
   touchable: {
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     fontWeight: "900",
-    backgroundColor: '#222831'
+    backgroundColor: "#222831"
   },
   touchable_three: {
     height: "10vh",
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     fontWeight: "900",
-    backgroundColor: '#222831'
+    backgroundColor: "#222831"
   },
   touchable_four: {
     height: "10vh",
@@ -124,11 +124,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     fontWeight: "900",
-    backgroundColor: '#222831'
+    backgroundColor: "#222831"
   },
   title: {
-    fontSize: '48px',
-    fontWeight: 900,
+    fontSize: "48px",
+    fontWeight: "900",
     color: '#fff',
   },
   
