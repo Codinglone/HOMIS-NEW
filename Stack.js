@@ -16,7 +16,7 @@ const MyStack = () => {
                 <Stack.Screen 
                     name="Home"
                     component={HomeScreen}
-                    options={{title: 'Welcome'}}
+                    options={{title: 'WELCOME TO HO-MIS'}}
                 />
                 <Stack.Screen 
                     name="Profile"
