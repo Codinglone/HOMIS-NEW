@@ -16,27 +16,32 @@ const NormalOrder = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={() => navigation.navigate("Foods And Snacks")}>
-      <ImageBackground
-        source={food}
-        resizeMode="cover"
-        style={styles.imageBack}
-      >
-        <View style={styles.overlay} />
-        <Text style={{ color: "#FCFFE7", fontSize: 32, fontWeight: "900" }}>
-        FOODS & SNACKS
-        </Text>
-      </ImageBackground>
+        <ImageBackground
+          source={food}
+          resizeMode="cover"
+          style={styles.imageBack}
+        >
+          <View style={styles.overlay} />
+          <Text style={{ color: "#FCFFE7", fontSize: 32, fontWeight: "900" }}>
+            FOODS & SNACKS
+          </Text>
+        </ImageBackground>
       </TouchableOpacity>
-      <ImageBackground
-        source={beverage}
-        resizeMode="cover"
-        style={styles.imageBack}
+
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Drinks And Beverages")}
       >
-        <View style={styles.overlay} />
-        <Text style={{ color: "#FCFFE7", fontSize: 32, fontWeight: "900" }}>
-          DRINKS & BEVERAGES
-        </Text>
-      </ImageBackground>
+        <ImageBackground
+          source={beverage}
+          resizeMode="cover"
+          style={styles.imageBack}
+        >
+          <View style={styles.overlay} />
+          <Text style={{ color: "#FCFFE7", fontSize: 32, fontWeight: "900" }}>
+            DRINKS & BEVERAGES
+          </Text>
+        </ImageBackground>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };

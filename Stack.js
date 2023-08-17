@@ -8,6 +8,7 @@ import DataScreen from "./screens/DataScreen"
 import PlaceOrder from "./screens/PlaceOrder"
 import NormalOrder from "./screens/NormalOrder"
 import FoodsAndSnacks from "./screens/FoodsAndSnacks"
+import DrinksAndBeverages from "./screens/DrinksAndBeverages"
 const Stack = createNativeStackNavigator()
 
 const MyStack = () => {
@@ -29,6 +30,10 @@ const MyStack = () => {
                 <Stack.Screen 
                     name="Foods And Snacks"
                     component={FoodsAndSnacks}
+                    />
+                    <Stack.Screen 
+                    name="Drinks And Beverages"
+                    component={DrinksAndBeverages}
                     />
                 <Stack.Screen 
                     name="Manager Account Login"
