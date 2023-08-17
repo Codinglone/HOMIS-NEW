@@ -1,4 +1,4 @@
-import { StyleSheet, View, SafeAreaView, ScrollView, Text, TextInput } from "react-native-web"
+import { StyleSheet, View, SafeAreaView, ScrollView, Text, TextInput } from "react-native"
 const FoodsAndSnacks = () => {
   return (
     <SafeAreaView>
