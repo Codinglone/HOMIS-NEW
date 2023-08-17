@@ -58,7 +58,7 @@ const DataScreen = () => {
 
   return (
     <View>
-      {data.length > 0 ? (
+      {/* {data.length > 0 ? (
         <FlatList
           data={data}
           renderItem={({ item }) => (
@@ -84,7 +84,7 @@ const DataScreen = () => {
         ) : (
           <Text>Loading photos...</Text>
         )}
-      </ScrollView>
+      </ScrollView> */}
       <ScrollView>
         {orders.length > 0 ? (
           orders.map((order) => (

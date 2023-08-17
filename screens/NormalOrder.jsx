@@ -19,6 +19,7 @@ const NormalOrder = ({ navigation }) => {
         source={food}
         resizeMode="cover"
         style={styles.imageBack}
+        
       >
         <View style={styles.overlay} />
         <Text style={{ color: "#FCFFE7", fontSize: 32, fontWeight: "900" }}>
